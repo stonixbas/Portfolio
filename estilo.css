@@ -1,0 +1,89 @@
+:root {
+    --padding-container: 100px 0;
+    --color_0: #29282A;
+    --color_1: #43444B;
+    --color_2: #59646E;
+    --color_3: #6E8690;
+    --color_4: #84ABAE;
+    --color_5: #A3CFC6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mi_cabecera {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color_0);
+    color: #fff;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.contenedor_header {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+    gap: 10px 10px;
+    grid-template-areas: 
+        "imagen h1"
+        "imagen h3"
+        "a a";
+    height: 100vh;
+}
+
+
+.imagen_personal{
+    grid-area: imagen;
+}
+
+.titulo_cabecera {
+    grid-area: h1;
+}
+
+.subtitulo_cabecera {
+    grid-area: h3;
+}
+
+.iniciar{
+    grid-area: ha;
+}
+
+.flecha {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+}
+
+.flecha:hover{
+    opacity: 0.7;
+}
+
+.flecha::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
