@@ -15,6 +15,8 @@
     font-family: 'Fira Code', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Estilos header */
+
 .mi_cabecera {
     width: 100%;
     height: 100vh;
@@ -87,3 +89,27 @@
     border-radius: 100%;
     animation: pulse 3s infinite;
 }
+
+
+/* Estilo sobre mi */
+
+
+
+/* Estilo proyectos */
+
+
+
+/* Estilo experiencia */
+
+
+
+/* Sección preguntas*/
+
+
+
+/* Estilo contacto */
+
+
+
+/* Estilo copy_rrss */
+
