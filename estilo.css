@@ -93,23 +93,41 @@
 
 /* Estilo sobre mi */
 
-
+.sobre_mi {
+    background-color: var(--color_1);
+}
 
 /* Estilo proyectos */
 
+.proyectos {
+    background-color: var(--color_2);
+}
 
+/* Estilo formacion */
 
-/* Estilo experiencia */
+.formacion {
+    background-color: var(--color_3);
+}
 
+/* Sección experiencia*/
 
+.experiencia_completa {
+    background-color: var(--color_4);
+}
 
-/* Sección preguntas*/
-
-
+.logo_empresa {
+    max-width: 150px;
+    max-height: 150px;
+}
 
 /* Estilo contacto */
 
-
+.contacto {
+    background-color: var(--color_5);
+}
 
 /* Estilo copy_rrss */
 
+.copy_rrss {
+    background-color: var(--color_1);
+}
