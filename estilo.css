@@ -123,7 +123,6 @@
     grid-template-rows: repeat(1fr, auto);
     padding: 20px 30px;
     position: absolute;
-
 }
 
 .opciones_menu > a {
@@ -148,6 +147,30 @@
 .red_social_menu {
     display: flexbox;
     color: #fff;
+}
+
+/* Maquetacion Hover Menu */
+
+.menu{
+    width: 50px;
+    background-color: rgba(31, 31, 31, 0);
+}
+
+.menu:hover{
+    width: 200px;
+    background-color: rgba(31, 31, 31);
+    .opciones_menu{
+        display: grid;
+    }
+    .logo_menu{
+        display: flex;
+    }
+    .redes_sociales_menu{
+        display: flex;
+    }
+    .red_social_menu {
+        font-size: 26px;
+    }
 }
 
 /* Secciones */
@@ -176,7 +199,13 @@ section{
 /* Sección experiencia*/
 
 .experiencia_completa {
-    background-color: var(--color_4);
+    background: rgb(110,134,144);
+    background: linear-gradient(180deg, rgba(110,134,144,1) 0%, rgba(132,171,174,1) 50%, rgba(163,207,198,1) 100%);
+    svg{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
 }
 
 .logo_empresa {
@@ -186,8 +215,162 @@ section{
 
 /* Estilo contacto */
 
+.seccion_contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 2000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cmask id=%22b%22 x=%220%22 y=%220%22 width=%222000%22 height=%221000%22%3E%3Cpath fill=%22url(%23a)%22 d=%22M0 0h2000v1000H0z%22%2F%3E%3C%2Fmask%3E%3Cpath fill=%22%23A3CFC6%22 d=%22M0 0h2000v1000H0z%22%2F%3E%3Cg style=%22transform-origin:center center%22 stroke=%22%2343444b%22 stroke-width=%223.4%22 mask=%22url(%23b)%22%3E%3Cpath fill=%22none%22 d=%22M0 0h77v77H0zM77 0h77v77H77zM154 0h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bc1%22 d=%22M231 0h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M308 0h77v77h-77zM385 0h77v77h-77zM539 0h77v77h-77zM616 0h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b2d%22 d=%22M693 0h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b1a%22 d=%22M770 0h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1078 0h77v77h-77zM1232 0h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bff%22 d=%22M1463 0h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bcf%22 d=%22M1694 0h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1925 0h77v77h-77zM77 77h77v77H77z%22%2F%3E%3Cpath fill=%22%2343444bc7%22 d=%22M154 77h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b50%22 d=%22M308 77h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M385 77h77v77h-77zM539 77h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b2a%22 d=%22M616 77h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M924 77h77v77h-77zM1001 77h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b86%22 d=%22M1463 77h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1694 77h77v77h-77zM1771 77h77v77h-77zM1848 77h77v77h-77zM308 154h77v77h-77zM462 154h77v77h-77zM616 154h77v77h-77zM1001 154h77v77h-77zM1078 154h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444be5%22 d=%22M1386 154h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1463 154h77v77h-77zM1771 154h77v77h-77zM1848 154h77v77h-77zM1925 154h77v77h-77zM231 231h77v77h-77zM308 231h77v77h-77zM385 231h77v77h-77zM462 231h77v77h-77zM847 231h77v77h-77zM1001 231h77v77h-77zM1309 231h77v77h-77zM1386 231h77v77h-77zM1463 231h77v77h-77zM1540 231h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bce%22 d=%22M1617 231h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1694 231h77v77h-77zM1848 231h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b8c%22 d=%22M1925 231h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M0 308h77v77H0z%22%2F%3E%3Cpath fill=%22%2343444b91%22 d=%22M231 308h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M924 308h77v77h-77zM1001 308h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b03%22 d=%22M1078 308h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1232 308h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b05%22 d=%22M1309 308h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1463 308h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bce%22 d=%22M1617 308h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1771 308h77v77h-77zM1848 308h77v77h-77zM1925 308h77v77h-77zM231 385h77v77h-77zM1155 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b6c%22 d=%22M1232 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444be2%22 d=%22M1309 385h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1386 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b5b%22 d=%22M1463 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b97%22 d=%22M1540 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bbe%22 d=%22M1617 385h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1694 385h77v77h-77zM1848 385h77v77h-77zM1925 385h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b12%22 d=%22M154 462h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bed%22 d=%22M308 462h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M385 462h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b50%22 d=%22M462 462h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b95%22 d=%22M693 462h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M770 462h77v77h-77zM1078 462h77v77h-77zM1155 462h77v77h-77zM1232 462h77v77h-77zM1540 462h77v77h-77zM1694 462h77v77h-77zM1848 462h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b9b%22 d=%22M154 539h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M231 539h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bb2%22 d=%22M462 539h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bf9%22 d=%22M539 539h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b9f%22 d=%22M616 539h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1001 539h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b7c%22 d=%22M1078 539h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1155 539h77v77h-77zM1232 539h77v77h-77zM1309 539h77v77h-77zM1386 539h77v77h-77zM1540 539h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b73%22 d=%22M1771 539h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1848 539h77v77h-77zM1925 539h77v77h-77zM0 616h77v77H0zM77 616h77v77H77zM231 616h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b27%22 d=%22M539 616h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M693 616h77v77h-77zM847 616h77v77h-77zM924 616h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b98%22 d=%22M1155 616h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1232 616h77v77h-77zM1309 616h77v77h-77zM1386 616h77v77h-77zM1771 616h77v77h-77zM1848 616h77v77h-77zM231 693h77v77h-77zM308 693h77v77h-77zM385 693h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b1b%22 d=%22M539 693h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M770 693h77v77h-77zM847 693h77v77h-77zM924 693h77v77h-77zM1001 693h77v77h-77zM1078 693h77v77h-77zM1155 693h77v77h-77zM1232 693h77v77h-77zM1309 693h77v77h-77zM1540 693h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b70%22 d=%22M1694 693h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bb8%22 d=%22M1771 693h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M0 770h77v77H0zM77 770h77v77H77zM308 770h77v77h-77zM539 770h77v77h-77zM847 770h77v77h-77zM1155 770h77v77h-77zM1232 770h77v77h-77zM1309 770h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b08%22 d=%22M1540 770h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1617 770h77v77h-77zM1694 770h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444bee%22 d=%22M1848 770h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M77 847h77v77H77zM231 847h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b47%22 d=%22M847 847h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1001 847h77v77h-77zM1155 847h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444be5%22 d=%22M1386 847h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b98%22 d=%22M1617 847h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1694 847h77v77h-77zM1771 847h77v77h-77zM1848 847h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444ba1%22 d=%22M308 924h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444ba0%22 d=%22M462 924h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M539 924h77v77h-77zM693 924h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b0a%22 d=%22M847 924h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1001 924h77v77h-77zM1078 924h77v77h-77z%22%2F%3E%3Cpath fill=%22%2343444b59%22 d=%22M1155 924h77v77h-77z%22%2F%3E%3Cpath fill=%22none%22 d=%22M1540 924h77v77h-77zM1694 924h77v77h-77zM1771 924h77v77h-77z%22%2F%3E%3C%2Fg%3E%3Cpath fill=%22%23f3f3f3%22 filter=%22url(%23c)%22 opacity=%22.8%22 d=%22M0 0h2000v1000H0z%22%2F%3E%3Cdefs%3E%3CradialGradient id=%22a%22%3E%3Cstop offset=%2250%25%22 stop-color=%22%23fff%22 stop-opacity=%220%22%2F%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%22.5%22%2F%3E%3C%2FradialGradient%3E%3Cfilter id=%22c%22 x=%22-800%22 y=%22-400%22 width=%222800%22 height=%221400%22 filterUnits=%22userSpaceOnUse%22 primitiveUnits=%22userSpaceOnUse%22 color-interpolation-filters=%22linearRGB%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.11%22 numOctaves=%224%22 seed=%2215%22 stitchTiles=%22no-stitch%22 x=%220%22 y=%220%22 width=%222000%22 height=%221000%22 result=%22turbulence%22%2F%3E%3CfeSpecularLighting surfaceScale=%2210%22 specularConstant=%22.13%22 specularExponent=%2220%22 lighting-color=%22%23fff%22 x=%220%22 y=%220%22 width=%222000%22 height=%221000%22 in=%22turbulence%22 result=%22specularLighting%22%3E%3CfeDistantLight azimuth=%223%22 elevation=%22100%22%2F%3E%3C%2FfeSpecularLighting%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+
+}
+
+.tarjeta_contacto {
+    width: 100%;
+    height: 550px; 
+    max-width: 820px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .contacto {
+    display: grid;
+    grid-template-rows: repeat(1fr, 1fr, 1fr);
+    background: var(--color_0);
+    .titulo_contacto{
+        color: var(--color_5);
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 25px;
+    }
+    .img_contacto{
+        height: 170px;
+        width: 100%;
+    }
+    .subtitulo_contacto {
+        color: #6E8690;
+    }
+}
+
+.contacto_social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.redes_contacto {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    padding-left: 15px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.redes_contacto i {
     background-color: var(--color_5);
+    color: var(--color_1);
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.redes_contacto i:hover {
+    background: #fff;
+    color: #000;
+}
+
+.formulario {
+    background: var(--color_5);
+
+
+    .titulo_formulario {
+        color: var(--color_1);
+        position: relative;
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 25px;
+    }
+}
+
+form {
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.caja_entrada{
+    height: 40px;
+    width: 80%;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid var(--color_1);
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color: var(--color_1);
+    font-size: 15px;
+}
+
+.caja_entrada > label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color_1);
+    transition: 0.3s;
+}
+
+textarea.input {
+    resize: none;
+    min-height: 150px;
+    overflow: auto;
+    padding-top: 10px;
+}
+
+.boton_formulario {
+    position: relative;
+    top: 100px;
+    background: var(--color_1);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 45px;
+    width: 30%;
+    font-size: 16px;
+    color: var(--color_5);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.caja_entrada .input:focus ~ label,
+.caja_entrada .input:valid ~ label{
+    top: -1px;
+    left: 10px;
+    background: var(--color_5);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px;
 }
 
 /* Estilo footer */
@@ -205,27 +388,5 @@ footer {
     .redes_sociales{
         margin-left: 24px;
         display: inline-block;
-    }
-    
-}
-
-/* Maquetacion Hover Menu */
-
-.menu{
-    width: 50px;
-    background-color: rgba(31, 31, 31, 0);
-}
-
-.menu:hover{
-    width: 200px;
-    background-color: rgba(31, 31, 31);
-    .opciones_menu{
-        display: grid;
-    }
-    .logo_menu{
-        display: flex;
-    }
-    .redes_sociales_menu{
-        display: flex;
     }
 }
