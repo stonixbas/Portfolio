@@ -11,7 +11,7 @@
         <title>Portfolio personal</title>
     </head>
     <body>
-        <header class="mi_cabecera">
+        <header class="mi_cabecera" id="cabecera">
             <div id="particles-js"></div>
             <div class="contenedor_header">
                 <img  class="imagen_personal" src="/imagenes/Imagen_personal.png" alt="">
@@ -22,32 +22,34 @@
         </header>
         <nav class="menu">
             <div class="logo_menu">
-                <img  class="imagen_menu" src="/imagenes/Imagen_personal.png" alt="">
+                <a href="#cabecera">
+                    <img  class="imagen_menu" src="/imagenes/Imagen_personal.png" alt="">
+                </a>
+                
             </div>
             <div class="opciones_menu ">
-                <a href="#">
+                <a href="#sobre_mi">
                     <i class='bx bxs-user-detail' title="Sobre mi"></i>
                     <h4>Sobre mi</h4>
                 </a>
-                <a href="#">
+                <a href="#proyectos">
                     <i class='bx bxs-bulb' title="Proyectos"></i>
                     <h4>Proyectos</h4>
                 </a>
-                <a href="#">
+                <a href="#formacion">
                     <i class='bx bxs-book-bookmark' title="Formación"></i>
                     <h4>Formación</h4>
                 </a>
-                <a href="#">
+                <a href="#experiencia_completa">
                     <i class='bx bxs-extension' title="Experiencia"></i>
                     <h4>Experiencia</h4>
                 </a>
-                <a href="#">
+                <a href="#contacto">
                     <i class='bx bxs-contact' title="Contacto"></i>
                     <h4>Contacto</h4>
                 </a>
             </div>
             <div class="redes_sociales_menu">
-                <a id="boton_redes" class="red_social_menu" href=""><i class='bx bx-grid-small' title="Redes Sociales"></i></a>
                 <div>
                     <a class="red_social_menu" href="#"><i class='bx bxl-instagram' title="Instagram"></i></a>
                     <a class="red_social_menu" href="#"><i class='bx bxl-twitch' title="Twitch"></i></a>
@@ -69,7 +71,7 @@
 
             </section>
 
-            <section class="experiencia_completa" dir="experiencia_completa">
+            <section class="experiencia_completa" id="experiencia_completa">
                 <div class="experiencia">
                     <h1 class="titulo">Experiencia</h1>
                     <a href="" class="flecha_experiencia" id="before"><i class='bx bxs-left-arrow'></i></a>
@@ -133,15 +135,15 @@
 
             </section>
 
-            <footer class="copy_rrss">
+            <footer>
                 <h4 class="copyright">
                     Quesada Cabrera JI &copy; 2023 
-                </h4> 
+                </h4>
                 <div class="redes_sociales">
-                    <a class="red_social" href="#"><i class='bx bxl-instagram'></i></a>
-                    <a class="red_social" href="#"><i class='bx bxl-twitch'></i></a>
-                    <a class="red_social" href="#"><i class='bx bxl-github'></i></a>
-                    <a class="red_social" href="#"><i class='bx bxl-youtube'></i></a>
+                    <a class="red_social_menu" title="Instagram" href="#"><i class='bx bxl-instagram'></i></a>
+                    <a class="red_social_menu" title="Twitch" href="#"><i class='bx bxl-twitch'></i></a>
+                    <a class="red_social_menu" title="Github" href="#"><i class='bx bxl-github'></i></a>
+                    <a class="red_social_menu" title="Youtube" href="#"><i class='bx bxl-youtube'></i></a>
                 </div>
             </footer>
         </main>

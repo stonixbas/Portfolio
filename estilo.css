@@ -104,7 +104,7 @@
 
 .logo_menu {
     padding: 20px 30px;
-    display: flex;
+    display: none;
     align-items: center;
     margin-top: 10px;
 }
@@ -118,7 +118,7 @@
 }
 
 .opciones_menu {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(1fr);
     grid-template-rows: repeat(1fr, auto);
     padding: 20px 30px;
@@ -127,6 +127,8 @@
 }
 
 .opciones_menu > a {
+    /* margin-bottom: 14px; */
+    padding: 4px;
     text-decoration: none;
     color: #fff;
 }
@@ -139,7 +141,7 @@
     position: absolute;
     bottom: 0;
     padding: 20px 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -148,8 +150,9 @@
     color: #fff;
 }
 
-#boton_redes {
-    display: none;
+/* Secciones */
+section{
+    padding: 24px;
 }
 
 /* Estilo sobre mi */
@@ -187,8 +190,42 @@
     background-color: var(--color_5);
 }
 
-/* Estilo copy_rrss */
+/* Estilo footer */
 
-.copy_rrss {
+footer {
     background-color: var(--color_1);
+    padding: 12px;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    .copyright{
+        display: inline-block;
+    }
+    .redes_sociales{
+        margin-left: 24px;
+        display: inline-block;
+    }
+    
+}
+
+/* Maquetacion Hover Menu */
+
+.menu{
+    width: 50px;
+    background-color: rgba(31, 31, 31, 0);
+}
+
+.menu:hover{
+    width: 200px;
+    background-color: rgba(31, 31, 31);
+    .opciones_menu{
+        display: grid;
+    }
+    .logo_menu{
+        display: flex;
+    }
+    .redes_sociales_menu{
+        display: flex;
+    }
 }
