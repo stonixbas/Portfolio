@@ -90,6 +90,67 @@
     animation: pulse 3s infinite;
 }
 
+/* Estilo menu */
+
+.menu {
+    width: 200px;
+    height: 100%;
+    background-color: var(--color_0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+}
+
+.logo_menu {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.imagen_menu {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    background-color: #fff;
+
+}
+
+.opciones_menu {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr, auto);
+    padding: 20px 30px;
+    position: absolute;
+
+}
+
+.opciones_menu > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.opciones_menu > a > h4 {
+    display: inline-block;
+}
+
+.redes_sociales_menu {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.red_social_menu {
+    display: flexbox;
+    color: #fff;
+}
+
+#boton_redes {
+    display: none;
+}
 
 /* Estilo sobre mi */
 
