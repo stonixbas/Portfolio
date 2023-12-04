@@ -1,11 +1,19 @@
 :root {
     --padding-container: 100px 0;
     --color_0: #29282A;
+    --color_invisible: rgb(67, 68, 76, 0);
     --color_1: #43444B;
     --color_2: #59646E;
     --color_3: #6E8690;
     --color_4: #84ABAE;
     --color_5: #A3CFC6;
+}
+body{
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -54,20 +62,23 @@
 
 .titulo_cabecera {
     grid-area: h1;
+    display: flex;
+    align-items: end;
+    font-size: 40px;
 }
 
 .subtitulo_cabecera {
     grid-area: h3;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
 }
 
-.iniciar{
-    grid-area: ha;
-}
 
 .flecha {
     position: absolute;
-    bottom: 20%;
-    left: 50%;
+    bottom: 0;
+    left: 33%;
     color: #fff;
     transform: translate(0, -50%);
     transition: all 0.5s;
@@ -78,10 +89,20 @@
 }
 
 .flecha::before{
+    z-index: 5;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+}
+
+.pulso {
     position: absolute;
-    top: -16px;
-    left: -16px;
-    z-index: -1;
+    bottom: 20%;
+    left: 50%;
+    z-index: 5;
+    z-index: 5;
     content: '';
     width: 44px;
     height: 44px;
@@ -90,16 +111,30 @@
     animation: pulse 3s infinite;
 }
 
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
 /* Estilo menu */
 
 .menu {
-    width: 200px;
     height: 100%;
-    background-color: var(--color_0);
+    background-color: var(--color_invisible);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 300;
+    width: 50px;
+    transition: 0.3s;
 }
 
 .logo_menu {
@@ -107,6 +142,7 @@
     display: none;
     align-items: center;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .imagen_menu {
@@ -126,7 +162,6 @@
 }
 
 .opciones_menu > a {
-    /* margin-bottom: 14px; */
     padding: 4px;
     text-decoration: none;
     color: #fff;
@@ -150,11 +185,6 @@
 }
 
 /* Maquetacion Hover Menu */
-
-.menu{
-    width: 50px;
-    background-color: rgba(31, 31, 31, 0);
-}
 
 .menu:hover{
     width: 200px;
@@ -181,26 +211,145 @@ section{
 /* Estilo sobre mi */
 
 .sobre_mi {
-    background-color: var(--color_1);
+    background: rgb(41,40,42);
+    background: linear-gradient(180deg, rgba(41,40,42,1) 0%, rgba(67,68,75,1) 100%);
 }
 
 /* Estilo proyectos */
 
 .proyectos {
-    background-color: var(--color_2);
+    background: rgb(67,68,75);
+    background: linear-gradient(180deg, rgba(67,68,75,1) 0%, rgba(89,100,110,1) 100%);
 }
 
 /* Estilo formacion */
 
 .formacion {
-    background-color: var(--color_3);
+    background: rgb(89,100,110);
+    background: linear-gradient(180deg, rgba(89,100,110,1) 0%, rgba(110,134,144,1) 100%);
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+  /* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+  /* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+  /* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+  /* Place the container to the left */
+.left {
+    left: 0;
+}
+  /* Place the container to the right */
+.right {
+    left: 50%;
+}
+  /* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+  /* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+  /* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+  /* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
 }
 
 /* Sección experiencia*/
 
 .experiencia_completa {
     background: rgb(110,134,144);
-    background: linear-gradient(180deg, rgba(110,134,144,1) 0%, rgba(132,171,174,1) 50%, rgba(163,207,198,1) 100%);
+    background: linear-gradient(180deg, rgba(110,134,144,1) 0%, rgba(163,207,198,1) 100%);
     svg{
         padding: 0;
         margin: 0;
@@ -382,6 +531,7 @@ footer {
     bottom: 0px;
     display: flex;
     justify-content: center;
+    z-index: 2;
     .copyright{
         display: inline-block;
     }
