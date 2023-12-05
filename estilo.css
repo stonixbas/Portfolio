@@ -35,6 +35,20 @@ html {
     background: var(--color_0); 
 }
 
+.titulo {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    color: var(--color_5);
+    font-size: 40px;
+    background: rgb(41,40,42,0.5);
+    background: radial-gradient(circle, rgba(41,40,42,1) 0%, rgba(67,68,75,1) 20%, rgba(89,100,110,1) 40%, rgba(110,134,144,1) 60%, rgba(132,171,174,1) 80%, rgba(163,207,198,1) 100%);
+    padding: 10px 20px 10px 20px;
+    border: 5px solid var(--color_0);
+    border-radius: 20px;
+    outline: none;
+}
+
 /* Estilos header */
 
 .mi_cabecera {
@@ -149,6 +163,25 @@ html {
     transition: 0.3s;
 }
 
+/* .icono_menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    clip-path: ellipse(100% 50% at 0% 50%);
+    font-size: 40px;
+    width: 50px;
+    height: 100vh;
+    transition: 0.3s;
+} */
+
+
+
 .logo_menu {
     padding: 20px 30px;
     display: none;
@@ -216,6 +249,11 @@ html {
     }
 }
 
+/* .icono_menu:hover {
+    width: 200px;
+    display: none;
+    z-index: 300;
+} */
 /* Secciones */
 section{
     padding: 24px;
@@ -469,6 +507,8 @@ section{
     display: flex;
     justify-content: center;
     color: var(--color_5);
+    font-size: 24px;
+    padding: 20px 0 20px 0; 
 }
 
 .div_logo_empresa {
@@ -479,7 +519,7 @@ section{
 .la_experiencia {
     display: flex;
     text-align: justify;
-    padding: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
     color: var(--color_5);
 }
 
