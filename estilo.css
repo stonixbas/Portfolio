@@ -201,6 +201,7 @@ html {
 .menu:hover{
     width: 200px;
     background-color: rgba(31, 31, 31);
+    border-radius: 0 30px 30px 0;
     .opciones_menu{
         display: grid;
     }
@@ -285,8 +286,6 @@ section{
     justify-content: center;
     color: var(--color_1);
 }
-
-
 
 .boton_juego {
     position: relative;
@@ -441,16 +440,53 @@ section{
 .experiencia_completa {
     background: rgb(110,134,144);
     background: linear-gradient(180deg, rgba(110,134,144,1) 0%, rgba(163,207,198,1) 100%);
-    svg{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+}
+
+.experiencia {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    gap: 10px 10px;
+    position: relative;
+    padding: 40px 0 40px 0; 
+}
+
+.tipo_experiencia {
+    display: grid;
+    width: 350px;
+    height: 450px;
+    margin: 40px 0 40px 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background: var(--color_2);
+    box-shadow: 0 0 20px 10px rgb(67, 68, 76, 0.4);
+    overflow: hidden;
+    justify-content: center;
+}
+
+.nombre_empresa {
+    display: flex;
+    justify-content: center;
+    color: var(--color_5);
+}
+
+.div_logo_empresa {
+    display: flex;
+    justify-content: center;
+}
+
+.la_experiencia {
+    display: flex;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+    color: var(--color_5);
 }
 
 .logo_empresa {
     max-width: 150px;
     max-height: 150px;
+    border-radius: 30px;
 }
 
 /* Estilo contacto */
@@ -476,7 +512,7 @@ section{
     margin-bottom: 40px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px 10px rgb(67, 68, 76, 0.4);
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -485,7 +521,7 @@ section{
 .contacto {
     display: grid;
     grid-template-rows: repeat(1fr, 1fr, 1fr);
-    background: var(--color_0);
+    background: var(--color_1);
     .titulo_contacto{
         color: var(--color_5);
         padding-left: 20px;
@@ -617,12 +653,13 @@ textarea.input {
 
 footer {
     background-color: var(--color_1);
-    padding: 12px;
+    padding: 16px;
     position: sticky;
     bottom: 0px;
     display: flex;
     justify-content: center;
     z-index: 2;
+    font-size: 24px;
     .copyright{
         display: inline-block;
     }
