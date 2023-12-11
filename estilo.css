@@ -715,3 +715,77 @@ footer {
         display: inline-block;
     }
 }
+
+/* Media query for screens up to 1024px
+@media screen and (max-width: 1024px) {
+    .contenedor_header {
+        grid-template-areas:
+            "imagen"
+            "h1"
+            "h3"
+            "a";
+    }
+
+    .tarjeta_sobre_mi,
+    .contenedor_juegos,
+    .contenedor,
+    .tipo_experiencia {
+        width: 80%;
+    }
+}
+
+/* Media query for screens up to 768px 
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100px;
+    }
+
+    .icono_menu {
+        font-size: 30px;
+        top: 35vh;
+    }
+
+    .red_social_menu {
+        font-size: 20px;
+    }
+
+    .tarjetas_juego {
+        grid-template-columns: repeat(2, minmax(100px, 250px));
+    }
+}
+
+/* Media query for screens up to 375px 
+@media screen and (max-width: 375px) {
+    .menu {
+        width: 60px;
+    }
+
+    .icono_menu {
+        font-size: 25px;
+        top: 30vh;
+    }
+
+    .red_social_menu {
+        font-size: 16px;
+    }
+
+    .tarjetas_juego {
+        grid-template-columns: repeat(1, minmax(100px, 250px));
+    }
+
+    .tarjeta_sobre_mi,
+    .contenedor_juegos,
+    .contenedor,
+    .tipo_experiencia {
+        width: 100%;
+    }
+
+    .linea_tiempo::after {
+        left: 15px;
+    }
+
+    .contenedor {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
