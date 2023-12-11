@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo_menja.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <title>Menja</title>
+    </head>
+    <body>
+        <nav class="menu_html">
+            <div class="icono_menu_html"><i class='bx bx-category-alt'></i></div>
+            <div class="logo_menu_html">
+                <a href="../../index.html">
+                    <img  class="imagen_menu_html" src="../../imagenes/Imagen_personal.png" alt="">
+                </a>
+            </div>
+            <div class="opciones_menu_html ">
+                <a href="../../index.html">
+                    <i class='bx bxs-user-detail' title="Sobre mi"></i>
+                    <h4>Sobre mi</h4>
+                </a>
+                <a href="../../index.html">
+                    <i class='bx bxs-bulb' title="Proyectos"></i>
+                    <h4>Proyectos</h4>
+                </a>
+                <a href="../../index.html">
+                    <i class='bx bxs-book-bookmark' title="Formación"></i>
+                    <h4>Formación</h4>
+                </a>
+                <a href="../../index.html">
+                    <i class='bx bxs-extension' title="Experiencia"></i>
+                    <h4>Experiencia</h4>
+                </a>
+                <a href="../../index.html">
+                    <i class='bx bxs-contact' title="Contacto"></i>
+                    <h4>Contacto</h4>
+                </a>
+            </div>
+            <div class="redes_sociales_menu_html">
+                <div>
+                    <a class="red_social_menu_html" href="http://www.instagram.com" target="_blank"><i class='bx bxl-instagram' title="Instagram"></i></a>
+                    <a class="red_social_menu_html" href="http://www.twitch.tv" target="_blank"><i class='bx bxl-twitch' title="Twitch"></i></a>
+                    <a class="red_social_menu_html" href="http://www.github.com" target="_blank"><i class='bx bxl-github' title="Github"></i></a>
+                    <a class="red_social_menu_html" href="http://www.youtube.com" target="_blank"><i class='bx bxl-youtube' title="YouTube"></i></a>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <!-- Game canvas -->
+<canvas id="c"></canvas>
+
+<!-- Gameplay HUD -->
+<div class="hud">
+	<div class="hud__score">
+		<div class="score-lbl"></div>
+		<div class="cube-count-lbl"></div>
+	</div>
+	<div class="pause-btn"><div></div></div>
+	<div class="slowmo">
+		<div class="slowmo__bar"></div>
+	</div>
+</div>
+
+<!-- Menu System -->
+<div class="menus">
+	<div class="menu menu--main">
+		<h1>MENJA</h1>
+		<button type="button" class="play-normal-btn">PLAY GAME</button>
+		<button type="button" class="play-casual-btn">CASUAL MODE</button>
+		<div class="credits">An 8kB game by <a href="https://cmiller.tech">Caleb Miller</a></div>
+	</div>
+	<div class="menu menu--pause">
+		<h1>Paused</h1>
+		<button type="button" class="resume-btn">RESUME GAME</button>
+		<button type="button" class="menu-btn--pause">MAIN MENU</button>
+	</div>
+	<div class="menu menu--score">
+		<h1>Game Over</h1>
+		<h2>Your Score:</h2>
+		<div class="final-score-lbl"></div>
+		<div class="high-score-lbl"></div>
+		<button type="button" class="play-again-btn">PLAY AGAIN</button>
+		<button type="button" class="menu-btn--score">MAIN MENU</button>
+	</div>
+</div>
+
+        </header>
+        <script src="menja.js"></script>
+    </body>
+</html>

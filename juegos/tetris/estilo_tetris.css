@@ -1,0 +1,275 @@
+:root {
+    --padding-container: 100px 0;
+    --color_invisible: rgb(67, 68, 76, 0);
+    --color_0: #29282A;
+    --color_1: #43444B;
+    --color_2: #59646E;
+    --color_3: #6E8690;
+    --color_4: #84ABAE;
+    --color_5: #A3CFC6;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* barra scroll  */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color_5); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color_2); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color_0); 
+}
+
+body {
+  background-color: #c4d6a7;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.labels {
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #303a21;
+  word-wrap: break-word;
+  margin-bottom: 50px;
+}
+
+.frame {
+  margin: auto;
+  padding: 5px 0px;
+  width: 56px;
+  border: 2px solid #303a21;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #303a21;
+  color: #c4d6a7;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  border: 0px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.btn-rounded {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.fa {
+  font-size: 14px;
+}
+
+.flipx {
+  transform: scaleX(-1);
+}
+
+#score {
+  margin-top: 5px;
+}
+
+#outer-board {
+  width: 365px;
+  margin: auto;
+}
+
+#board {
+  float: left;
+  position: relative;
+  background-color: #c4d6a7;
+  width: 280px;
+  height: 448px;
+  margin: 10px auto;
+  border: 2px solid #303a21;
+}
+
+#stats {
+  float: right;
+  position: relative;
+  background-color: #c4d6a7;
+  width: 70px;
+  height: 448px;
+  margin: 10px auto;
+  border: 2px solid #303a21;
+}
+
+#banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  background-color: #303a21;
+  color: #c4d6a7;
+  z-index: 2;
+  text-align: center;
+}
+
+#message {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+#new-game {
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.block,
+.empty {
+  position: absolute;
+  background-color: #c4d6a7;
+  width: 28px;
+  height: 28px;
+}
+
+.empty {
+  opacity: 0.2;
+}
+
+.inner-tile {
+  position: absolute;
+  background-color: #c4d6a7;
+  border: 4px solid #303a21;
+  width: 14px;
+  height: 14px;
+  margin: 3px;
+}
+
+.inner-inner-tile {
+  position: absolute;
+  background-color: #303a21;
+  width: 8px;
+  height: 8px;
+  margin: 3px;
+}
+/* Estilo menu */
+
+.menu {
+    height: 100%;
+    background-color: var(--color_invisible);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 50px;
+    transition: 0.3s;
+}
+
+.icono_menu {
+    display: flex;
+    position: fixed;
+    top: 45vh;
+    left: 0;
+    z-index: 300;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(31, 31, 31);
+    clip-path: ellipse(100% 50% at 0% 50%);
+    font-size: 40px;
+    width: 50px;
+    height: 10vh;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.logo_menu {
+    padding: 20px 30px;
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.imagen_menu {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    background-color: #fff;
+
+}
+
+.opciones_menu {
+    display: none;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr, auto);
+    padding: 20px 30px;
+    position: absolute;
+}
+
+.opciones_menu > a {
+    padding: 4px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.opciones_menu > a > h4 {
+    display: inline-block;
+}
+
+.redes_sociales_menu {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    display: none;
+    flex-direction: column;
+}
+
+.red_social_menu {
+    display: flexbox;
+    color: #fff;
+}
+
+/* Maquetacion Hover Menu */
+
+.menu:hover{
+    width: 200px;
+    background-color: rgba(31, 31, 31);
+    border-radius: 0 30px 30px 0;
+    .opciones_menu{
+        display: grid;
+    }
+    .logo_menu{
+        display: flex;
+    }
+    .redes_sociales_menu{
+        display: flex;
+    }
+    .red_social_menu {
+        font-size: 26px;
+    }
+    .icono_menu {
+        display: none;
+    }
+}
